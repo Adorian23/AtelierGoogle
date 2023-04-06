@@ -1,0 +1,195 @@
+ctrl + / -comentez
+ctrl + d -duplicare
+
+print("Hello")
+print('Hello')
+
+#Operatori
+
+int = 3
+float = 3.5
+
+print(3+ 3j,type(3+3j)) - complex
+
+print("Hello")
+print('Hello')
+print(3+ 3j,type(3+3j))
+print (1+2)#adunare
+print(1- 2)#scadere
+print(1*2)#inmultire
+print(1/2) #impartire -normala
+print(1%2) #modulo - rest
+print(1//2)#catul
+print(1**2)#ridicare la putere
+print (1 == 2) #comparare
+print (1 != 2)#inegalitate
+print(1>2,1>1) #mai mare
+print(1<=2)#mai mic sau egal
+print(1 == 2 and 1 == 1) #raspunsul este False
+print (1 ==2 or 1==1) # raspunsul este adevarat
+print(not 1 == 2) # o sa iasa True
+#operatori de identitate
+print(7 is 7) # True
+print( 7 is not 9) #True
+print (7 in [1,2,3,4,5,6,7]) #daca se afla 7 in acea lista
+print(7 not in [1,2,3,4,5,6,7])#False
+
+
+
+#Variabile 
+
+a = None # None type-declarare nula
+a +=3
+
+print(a)
+
+a= '3'
+a += '1'
+
+--'31'
+
+
+nr_mere = 2
+nr_pere = 3
+mesaj = f'Ana are {nr_mere} mere si {nr_pere} pere'
+print(mesaj)
+
+
+nr_mere = 2
+nr_pere = 3
+mesaj = 'Ana are {} mere si {} pere'.format(nr_mere,nr_pere)
+print(mesaj)
+
+mesaj = 'Ana are {0} mere si {1} pere'.format(nr_mere,nr_pere)
+print(mesaj)
+
+#daca alti indecsi intre acolade o sa avem eroare
+
+mesaj = "Ana are "+str(nr_mere) +"mere si " +str(nr_pere) +"pere"
+print(mesaj)
+
+mesaj= f"Ana are '{nr_mere}'mere si '{nr_pere}' pere"
+print(mesaj)
+
+mesaj= f'Ana are \'{nr_mere}\'mere si \'{nr_pere}\' pere'
+print(mesaj)
+
+mesaj= f'Ana are \'{nr_mere}\'mere si \n \'{nr_pere}\' pere'
+print(mesaj)
+
+\n -noua linie
+
+mesaj="""
+Ana are mere
+si pere
+"""
+print(mesaj)
+
+mesaj="""\tAna are mere
+si pere
+"""
+
+\t -- tab
+
+#LISTE
+
+lista = []
+print(lista)
+
+lista = [8,-2,'s',3.1,"Ana are mere",None]
+print(lista.index(8)) -- 0
+
+print(lista[0:7:2])
+
+lista = [8,-2,'s',3.1,8,"Ana are mere",None]
+# print(lista.index(8))
+# print(lista)
+# print(lista[0:7:2])
+# print (lista[7:7]) # lista nula
+# print (lista[2:])
+#print (lista[:4])
+# print (lista[:4:2])
+lista.append(5)
+lista.insert(2,6)
+lista[3]=7 #inlocuieste valoarea
+lista.clear
+print(lista)
+
+lista = [8,-2,'s',3.1,8,"Ana are mere",None,[1,2,3,[4,5,6]]]
+# print(lista.index(8))
+# print(lista)
+# print(lista[0:7:2])
+# print (lista[7:7]) # lista nula
+# print (lista[2:])
+#print (lista[:4])
+# print (lista[:4:2])
+# lista.append(5)
+# lista.insert(2,6)
+# lista[3]=7 #inlocuieste valoarea
+# lista.clear
+print(lista[7][3][1])
+
+#Tupluri
+# tuplu =(1,7,-3)
+tuplu =(1,7,-3)
+print(type(tuplu))
+
+Daca se lucreaza cu tupluri si are doar o variabila in ea o sa fie de tip int de ex,dupa tupluri se pune o virgula ca sa nu dea eroare
+
+dictionar = {"key1": 1,
+             "key2":2,
+             3:4,
+             5.3:[0,2,5]}
+
+# print(dictionar,type(dictionar))
+# print(dictionar.values())
+# print(dictionar.items())
+dictionar.get("key1",100)
+print(dictionar)
+print(list(dictionar))
+
+#Seturi
+
+set1 ={1,3}
+print(type(set1))
+
+# set1=set()
+set1 ={4,1,3}
+set1.pop()
+print(set1) -raspuns 3,4
+
+#if 
+
+rezultatul = a if a< b else b -operator termal
+
+
+a = 2
+b = 2
+c = 3
+mesaj ,d= "a egal cu b",0
+if a<b and(d := a+b) :
+    mesaj="a mai mic decat b"
+elif a>b and (d := a-b):
+    mesaj="a mai mare decat b"
+elif a<c and (d := a+c):
+    mesaj="a mai mic decat c"
+print(f"Mesaj: {mesaj}")
+print(f'd: {d}')
+
+rezultatul = a if a< b else b
+
+
+#structuri repetitive while,for..
+
+a = 1
+b = 2
+rezultat = 0
+# while a< 10 :
+#     a +=1
+#     print("Ana are mere")
+
+# for i in range(0,10):
+#     print(f"Set instructiuni {i}")
+
+for index,value in enumerate([9,8,7]):
+    print(f'index  : {index},value : {value}')
